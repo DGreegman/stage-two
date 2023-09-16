@@ -47,7 +47,8 @@ class PersonController extends Controller
             if ($person) {
                 return response()->json([
                     'status' => 200,
-                    'message' => "Person Added Sucessfully"
+                    'message' => "Person Added Sucessfully",
+                    'user_id' => $person->id
                 ], 200);
             } else {
                 return response()->json([
